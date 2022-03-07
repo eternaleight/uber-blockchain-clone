@@ -17,7 +17,7 @@ const style = {
 
 //(0,6)0~6 前６桁表示 (39) 42桁-39 = 後3桁表示 0x7165...40C
 //イーサリアムアドレス(metamask)
-const currentAccount = '0x7165662174c8b2A4e97d6321bb8caeBb3179940C'
+const currentAccount = '9'
 
 const Navbar = () => {
   return (
@@ -41,7 +41,7 @@ const Navbar = () => {
         </div>
         {currentAccount ? (
             // metamaskアドレス文字省略
-            <div>{currentAccount.slice(0, 6)}...{currentAccount.slice(39)}</div>
+          <div><BsPerson/>{currentAccount.slice(0, 6)}...{currentAccount.slice(39)}</div>
         ) : (
           <div className={style.loginButton}>
             <span className={style.loginText}>Log in</span>
